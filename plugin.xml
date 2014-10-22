@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="fr.louisbl.cordova.gpslocation"
+      version="0.1.0">
+
+    <name>Native GPS Location for Cordova - Android</name>
+    <description>Android geolocation plugin using GPS provider</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,geolocation,android,gps</keywords>
+    <repo>https://github.com/louisbl/cordova-gpslocation</repo>
+    <issue>https://github.com/louisbl/cordova-gpslocation/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+
+        <js-module src="www/Coordinates.js" name="Coordinates">
+            <clobbers target="Coordinates" />
+        </js-module>
+
+        <js-module src="www/PositionError.js" name="PositionError">
+            <clobbers target="PositionError" />
+        </js-module>
+
+        <js-module src="www/Position.js" name="Position">
+            <clobbers target="Position" />
+        </js-module>
+
+        <js-module src="www/GPSLocation.js" name="GPSLocation">
+            <clobbers target="window.GPSLocation" />
+        </js-module>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GPSLocation">
+                <param name="android-package" value="fr.louisbl.cordova.gpslocation.CordovaGPSLocation"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </config-file>
+
+        <source-file src="src/android/CordovaLocationListener.java" target-dir="src/fr/louisbl/cordova/gpslocation" />
+        <source-file src="src/android/CordovaGPSLocation.java" target-dir="src/fr/louisbl/cordova/gpslocation" />
+        <source-file src="src/android/LocationUtils.java" target-dir="src/fr/louisbl/cordova/gpslocation" />
+
+    </platform>
+</plugin>
