@@ -20,8 +20,8 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
-           id="fr.louisbl.cordova.gpslocation"
-      version="0.1.0">
+           id="cordova-plugin-gpslocation"
+      version="1.0.0">
 
     <name>Native GPS Location for Cordova - Android</name>
     <description>Android geolocation plugin using GPS provider</description>

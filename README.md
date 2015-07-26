@@ -43,6 +43,12 @@ see the Privacy Guide.
 
 ## Installation
 
+The plugin is published on [npm](https://www.npmjs.com/package/cordova-plugin-gpslocation):
+
+    cordova plugin add cordova-plugin-gpslocation
+
+If you wish to use the old Cordova registry, use the previous plugin id:
+
     cordova plugin add fr.louisbl.cordova.gpslocation
 
 ## Supported Platforms

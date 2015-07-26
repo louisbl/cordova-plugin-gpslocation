@@ -21,8 +21,8 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="fr.louisbl.cordova.gpslocation.tests"
-    version="0.1.0">
+    id="cordova-plugin-gpslocation.tests"
+    version="1.0.0">
     <name>GPSlocation Plugin Tests</name>
     <license>Apache 2.0</license>
 
